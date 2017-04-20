@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+      <meta http-equiv=Content-Type content="text/html;  charset=ISO-8859-1">
+  		<meta name="viewport" content="width=160, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+  		<meta name="ad.size" content = "width=160, height=600">
+
+		  <title>ECU-196: Home 160x600</title>
+
+		  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"> </script>
+
+		<style>
+			/* classes */
+			.pos-absolute { position: absolute; }
+
+			.animated-content {
+				position: absolute;
+				overflow:hidden;
+				width:160px;
+				height:600px;
+				top:600px;
+			}
+
+			.mask {
+				position: absolute;
+				overflow: hidden;
+			}
+
+			/* IDs */
+			#bg-exit { background-color:#fff; cursor: pointer; z-index: 99999; }
+			#layout_guide { z-index: 10000; }
+			#banner { background-color:#222; overflow:hidden; }
+			#border { border:1px solid #222; opacity:0; }
+			#banner:hover { cursor: hand; }
+
+			#hero { background: transparent url('img/hero.jpg') no-repeat 0px 0px;}
+
+			#copy01 { background: transparent url('img/sprite.png') no-repeat 0px 0px;}
+			#copy02 { background: transparent url('img/sprite.png') no-repeat -336px 0px;}
+			#copy03 { background: transparent url('img/sprite.png') no-repeat -672px 0px;}
+			#copy04 { background: transparent url('img/sprite.png') no-repeat 0px -280px;}
+			#copy05 { background: transparent url('img/sprite.png') no-repeat 0px -560px;}
+			#copy06 { background: transparent url('img/sprite.png') no-repeat -336px -280px;}
+
+			#cta-hover { background: transparent url('img/sprite.png') no-repeat -336px -560px;}
+			#cta-off { background: transparent url('img/sprite.png') no-repeat -672px -280px;}
+			#gradient { background: transparent url('img/sprite.png') no-repeat -672px -560px;}
+			#logo-ecu { background: transparent url('img/sprite.png') no-repeat -1008px 0px;}
+
+			#ornate-bottom { background: transparent url('img/sprite.png') no-repeat -1008px -280px;}
+			#ornate-top { background: transparent url('img/sprite.png') no-repeat -1344px 0px;}
+
+			#tagline { background: transparent url('img/sprite.png') no-repeat -1008px -560px;}
+
+		</style>
+    </head>
+
+    <body>
+    	<div id = "container">
+    		<div id = "border" class = "pos-absolute"></div>
+	    	<div id = "banner" class = "pos-absolute">
+		    	<div id = "content" class = "pos-absolute">
+
+		    		<div id = "hero-wrapper" class = "animated-content">
+		    			<div id = "hero" class = "animated-content"></div>
+		    		</div>
+
+		    		<div id = "gradient" class = "animated-content"></div>
+
+		    		<div id = "copy-mask" class = "animated-content">
+		    			<div id = "copy-offset" class = "animated-content">
+				    		<div id = "copy02" class = "animated-content"></div>
+				    		<div id = "copy01" class = "animated-content"></div>
+				    		<div id = "copy03" class = "animated-content"></div>
+				    		<div id = "copy04" class = "animated-content"></div>
+				    		<div id = "copy05" class = "animated-content"></div>
+				    		<div id = "copy06" class = "animated-content"></div>
+					    </div>
+					</div>
+
+			    	<div id = "logo-ecu" class = "animated-content"></div>
+			    	<div id = "tagline" class = "animated-content"></div>
+
+			    	<div id = "cta" class = "animated-content">
+			    		<div id = "cta-hover" class = "animated-content"></div>
+			    		<div id = "cta-off" class = "animated-content"></div>
+			    	</div>
+
+				    <div id = "ornate-bottom" class = "animated-content"></div>
+				    <div id = "ornate-top" class = "animated-content"></div>
+		    	</div>
+	    	</div>
+
+		    <!--
+	    	<div id = "layout-guide" class = "pos-absolute"><img src = "../../_guide/01-auto/160x600/01.jpg"></div>
+	    	-->
+
+	    	<div id="bg-exit" class = "pos-absolute"></div>
+	    </div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+		<script src="js/jquery.transit.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/banner.js"></script>
+		<script type="text/javascript">
+
+			var clickTag = "https://www.elevationscu.com/";
+
+			$(document).ready(function()
+			{
+				if (Enabler.isInitialized())
+				{
+					enablerInitComplete();
+				} else {
+					Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitComplete);
+				}
+
+				function enablerInitComplete()
+				{
+					if (Enabler.isPageLoaded())
+					{
+					    pageLoadComplete();
+					} else {
+						Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadComplete);
+					}
+
+					function pageLoadComplete()
+					{
+					    var banner = new Banner();
+						banner.render();
+					}
+				}
+			});
+
+		</script>
+    </body>
+</html>
