@@ -88,24 +88,24 @@
 
 	//-------------------------------------------------------------------------
 
-	Banner.prototype.showCopy = function( _copy, _delay)
-	{
-		_copy.css({top:200, left:0, opacity:.5});
-		animate(_delay, _copy, {top:-5, opacity:1}, 300, "easeOutQuart");
-		animate(_delay+300, _copy, {top:0}, 225, "easeInOutQuad");
-	};
-
-	Banner.prototype.showCopyFade = function( _copy, _delay)
-	{
-		_copy.css({top:0, left:0, opacity:0});
-		animate(_delay, _copy, {opacity:1}, 700, "easeOutQuart");
-	};
-
-	Banner.prototype.hideCopy = function( _copy, _delay)
-	{
-		animate(_delay, _copy, {top:3}, 125, "easeInOutQuad");
-		animate(_delay+125, _copy, {top:-200, opacity:.5}, 400, "easeInQuart");
-	};
+	// Banner.prototype.showCopy = function( _copy, _delay)
+	// {
+	// 	_copy.css({top:200, left:0, opacity:.5});
+	// 	animate(_delay, _copy, {top:-5, opacity:1}, 300, "easeOutQuart");
+	// 	animate(_delay+300, _copy, {top:0}, 225, "easeInOutQuad");
+	// };
+  //
+	// Banner.prototype.showCopyFade = function( _copy, _delay)
+	// {
+	// 	_copy.css({top:0, left:0, opacity:0});
+	// 	animate(_delay, _copy, {opacity:1}, 700, "easeOutQuart");
+	// };
+  //
+	// Banner.prototype.hideCopy = function( _copy, _delay)
+	// {
+	// 	animate(_delay, _copy, {top:3}, 125, "easeInOutQuad");
+	// 	animate(_delay+125, _copy, {top:-200, opacity:.5}, 400, "easeInQuart");
+	// };
 
 	//-------------------------------------------------------------------------
 
@@ -131,12 +131,22 @@
 
 	Banner.prototype.showScene1 = function()
 	{
-    anime({
-      targets: '#hero',
-      opacity: 1,
-      duration: 2000,
-      easing: 'easeOutElastic'
-    });
+    let scene1 = anime.timeline();
+
+    scene1
+      .add({
+        targets: '#hero',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        scale: {
+          value: [1, 1.1],
+          duration: 6000,
+          easing: 'easeInQuart',
+        },
+      })
+      .add({
+        
+      })
 
 		// this.__gradient.css({top:0, left:0, opacity:0});
 		// animate(0, this.__gradient, {opacity:.87}, 300, "easeOutQuart");
