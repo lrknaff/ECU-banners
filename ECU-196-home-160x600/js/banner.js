@@ -34,8 +34,6 @@
 		this.__heroWrapper = $("#hero-wrapper");
 		this.__hero = $("#hero");
 
-		this.__gradient = $("#gradient");
-
 		this.__copyMask = $("#copy-mask");
 			this.__copyOffset = $("#copy-offset");
 				this.__copy01 = $("#copy01");
@@ -44,6 +42,9 @@
 				this.__copy04 = $("#copy04");
 				this.__copy05 = $("#copy05");
 				this.__copy06 = $("#copy06");
+				this.__copy07 = $("#copy07");
+				this.__copy08 = $("#copy08");
+				this.__copy09 = $("#copy09");
 
 		this.__ornateTop = $("#ornate-top");
 		this.__ornateBottom = $("#ornate-bottom");
@@ -82,7 +83,7 @@
 	Banner.prototype.run = function()
 	{
 		var banner = this;
-		setTimeout(function(){banner.showScene1();}, 300);
+		setTimeout(function(){banner.showScene1();}, 100);
 	};
 
 	//-------------------------------------------------------------------------
@@ -110,90 +111,100 @@
 
 	Banner.prototype.showHero = function( _wrapper, _hero, _delay)
 	{
-		//var w = 376
-		var h = 360;
+		// var w = 160;
+		// var h = 680;
+    //
+		// _wrapper.css({top:0, left:0, opacity:1, width:w, height:h});
+		// // animate(_delay, _wrapper, {top:-74}, 6500, "linear");
+		// // animate(_delay+6500, _wrapper, {top:-80}, 1000, "easeOutQuad");
+    //
+		// // _hero.css({top:0, left:0, opacity:0, width:w, height:h});
+		// // animate(_delay, _hero, {opacity:1}, 500, "easeOutQuad");
 
-		_wrapper.css({transformOrigin: '164px 20px'});
-		_wrapper.css({top:-78, left:0, opacity:1, height:h, scale:1.2});
-		animate(_delay, _wrapper, {scale:1.04}, 7500, "linear");
-		animate(_delay+7500, _wrapper, {scale:1}, 1400, "easeOutQuad");
-
-		_hero.css({top:0, left:0, opacity:0, height:h});
-		animate(_delay, _hero, {opacity:1}, 500, "easeOutQuad");
+    // anime({
+    //   targets: '_hero',
+    //   opacity: 1
+    // });
 	};
 
 	//-------------------------------------------------------------------------
 
 	Banner.prototype.showScene1 = function()
 	{
-		this.__gradient.css({top:0, left:0, opacity:0});
-		animate(0, this.__gradient, {opacity:.65}, 300, "easeOutQuart");
+    anime({
+      targets: '#hero',
+      opacity: 1,
+      duration: 2000,
+      easing: 'easeOutElastic'
+    });
 
-		this.showHero( this.__heroWrapper, this.__hero, 100 );
+		// this.__gradient.css({top:0, left:0, opacity:0});
+		// animate(0, this.__gradient, {opacity:.87}, 300, "easeOutQuart");
 
-		this.__ornateTop.css({top:-50, left:0, opacity:0});
-		animate(400, this.__ornateTop, {top:0, opacity:1}, 550, "easeOutQuart");
+		// this.showHero( this.__heroWrapper, this.__hero, 100 );
 
-		this.__ornateBottom.css({top:50, left:0, opacity:0});
-		animate(400, this.__ornateBottom, {top:0, opacity:1}, 550, "easeOutQuart");
-
-		var y = 73;
-		var h = 106;
-		this.__copyMask.css({top:y, left:0, opacity:1, height:h});
-		this.__copyOffset.css({top:-y, left:0, opacity:1});
-
-		this.showCopy( this.__copy01, 700);
-		this.showCopy( this.__copy02, 800);
-
-		var banner = this;
-		setTimeout(function(){banner.showScene2();}, 3100);
+		// this.__ornateTop.css({top:-40, left:0, opacity:0});
+		// animate(400, this.__ornateTop, {top:0, opacity:1}, 550, "easeOutQuart");
+    //
+		// this.__ornateBottom.css({top:40, left:0, opacity:0});
+		// animate(400, this.__ornateBottom, {top:0, opacity:1}, 550, "easeOutQuart");
+    //
+		// var y = 91;
+		// var h = 140;
+		// this.__copyMask.css({top:y, left:0, opacity:1, height:h});
+		// this.__copyOffset.css({top:-y, left:0, opacity:1});
+    //
+		// this.showCopy( this.__copy01, 700);
+		// this.showCopy( this.__copy02, 775);
+		// this.showCopy( this.__copy03, 850);
+    //
+		// var banner = this;
+		// setTimeout(function(){banner.showScene2();}, 3600);
 	};
 
 	Banner.prototype.showScene2 = function()
 	{
 		this.hideCopy( this.__copy01, 0);
 		this.hideCopy( this.__copy02, 75);
+		this.hideCopy( this.__copy03, 150);
 
-		this.showCopy( this.__copy03, 675);
-		this.showCopy( this.__copy04, 750);
+		this.showCopy( this.__copy04, 600);
+		this.showCopy( this.__copy05, 675);
+		this.showCopy( this.__copy06, 750);
 
 		var banner = this;
-		setTimeout(function(){banner.showScene3();}, 3300);
+		setTimeout(function(){banner.showScene3();}, 2800);
 	};
 
 	Banner.prototype.showScene3 = function()
 	{
-		this.hideCopy( this.__copy03, 0);
-		this.hideCopy( this.__copy04, 75);
+		this.hideCopy( this.__copy04, 0);
+		this.hideCopy( this.__copy05, 75);
+		this.hideCopy( this.__copy06, 150);
 
-		//animate(0, this.__gradient, {opacity:.4}, 1800, "easeInOutSine");
-
-		this.showCopy( this.__copy05, 600);
-		this.showCopy( this.__copy06, 675);
+		this.showCopy( this.__copy07, 600);
+		this.showCopy( this.__copy08, 675);
+		this.showCopy( this.__copy09, 750);
 
 		var banner = this;
-		setTimeout(function(){banner.showResolve();}, 3300);
+		setTimeout(function(){banner.showResolve();}, 3200);
 	};
 
 	Banner.prototype.showResolve = function()
 	{
-		this.hideCopy( this.__copy05, 0);
-		this.hideCopy( this.__copy06, 75);
+		this.hideCopy( this.__copy07, 0);
+		this.hideCopy( this.__copy08, 75);
+		this.hideCopy( this.__copy09, 150);
 
-		animate(100, this.__ornateTop, {top:-40, opacity:0}, 550, "easeInQuart");
-		animate(100, this.__ornateBottom, {top:40, opacity:0}, 550, "easeInQuart");
-
-		animate(500, this.__gradient, {opacity:1}, 700, "easeOutQuart");
-
-		this.__logoECU.css({top:0, left:0, opacity:0});
-		animate(800, this.__logoECU, {top:0, opacity:1}, 600, "easeOutQuad");
+		this.__logoECU.css({top:50, left:0, opacity:0});
+		animate(650, this.__logoECU, {top:0, opacity:1}, 600, "easeOutQuart");
 
 		this.__tagline.css({top:0, left:0, opacity:0});
-		animate(1300, this.__tagline, {top:0, opacity:1}, 600, "easeOutQuad");
+		animate(1200, this.__tagline, {top:0, opacity:1}, 900, "easeOutQuart");
 
 		var banner = this;
-		setTimeout(function(){banner.showCTA();}, 1800);
-		setTimeout(function(){banner.end();}, 2100);
+		setTimeout(function(){banner.showCTA();}, 1600);
+		setTimeout(function(){banner.end();}, 2500);
 	};
 
 	Banner.prototype.showCTA = function()
