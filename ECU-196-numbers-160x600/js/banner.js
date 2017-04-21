@@ -34,17 +34,15 @@
 		this.__heroWrapper = $("#hero-wrapper");
 		this.__hero = $("#hero");
 
-		this.__copyMask = $("#copy-mask");
-			this.__copyOffset = $("#copy-offset");
-				this.__copy01 = $("#copy01");
-				this.__copy02 = $("#copy02");
-				this.__copy03 = $("#copy03");
-				this.__copy04 = $("#copy04");
-				this.__copy05 = $("#copy05");
-				this.__copy06 = $("#copy06");
-				this.__copy07 = $("#copy07");
-				this.__copy08 = $("#copy08");
-				this.__copy09 = $("#copy09");
+		this.__copy01 = $("#copy01");
+		this.__copy02 = $("#copy02");
+		this.__copy03 = $("#copy03");
+		this.__copy04 = $("#copy04");
+		this.__copy05 = $("#copy05");
+		this.__copy06 = $("#copy06");
+		this.__copy07 = $("#copy07");
+		this.__copy08 = $("#copy08");
+		this.__copy09 = $("#copy09");
 
 		this.__ornateTop = $("#ornate-top");
 		this.__ornateBottom = $("#ornate-bottom");
@@ -56,7 +54,6 @@
 			this.__ctaOff = $("#cta-off");
 			this.__ctaHover = $("#cta-hover");
 
-		this.__layoutGuide = $("#layout-guide");
 		this.__bgExit = $("#bg-exit");
 	};
 
@@ -70,12 +67,7 @@
 		this.__banner.css({top:stroke, left:stroke, width:w-stroke*2, height:h-stroke*2});
 		this.__border.css({top:0, left:0, width:w-stroke*2, height:h-stroke*2, opacity:1});
 		this.__content.css({top:-stroke, left:-stroke, width:w, height:h});
-		this.__layoutGuide.css({top:0, left:0, opacity:.5});
 		this.__bgExit.css({top:0, left:0, width:w, height:h, opacity:0});
-
-		this.__maskOffset = 84;
-
-		//this.__BG.css({transformOrigin: '150px 160px'});
 	};
 
 	//-------------------------------------------------------------------------
@@ -83,64 +75,24 @@
 	Banner.prototype.run = function()
 	{
 		var banner = this;
-		setTimeout(function(){banner.showScene1();}, 100);
+		setTimeout(function(){banner.showScene();}, 100);
 	};
 
 	//-------------------------------------------------------------------------
 
-	// Banner.prototype.showCopy = function( _copy, _delay)
-	// {
-	// 	_copy.css({top:200, left:0, opacity:.5});
-	// 	animate(_delay, _copy, {top:-5, opacity:1}, 300, "easeOutQuart");
-	// 	animate(_delay+300, _copy, {top:0}, 225, "easeInOutQuad");
-	// };
-  //
-	// Banner.prototype.showCopyFade = function( _copy, _delay)
-	// {
-	// 	_copy.css({top:0, left:0, opacity:0});
-	// 	animate(_delay, _copy, {opacity:1}, 700, "easeOutQuart");
-	// };
-  //
-	// Banner.prototype.hideCopy = function( _copy, _delay)
-	// {
-	// 	animate(_delay, _copy, {top:3}, 125, "easeInOutQuad");
-	// 	animate(_delay+125, _copy, {top:-200, opacity:.5}, 400, "easeInQuart");
-	// };
-
-	//-------------------------------------------------------------------------
-
-	Banner.prototype.showHero = function( _wrapper, _hero, _delay)
-	{
-		// var w = 160;
-		// var h = 680;
-    //
-		// _wrapper.css({top:0, left:0, opacity:1, width:w, height:h});
-		// // animate(_delay, _wrapper, {top:-74}, 6500, "linear");
-		// // animate(_delay+6500, _wrapper, {top:-80}, 1000, "easeOutQuad");
-    //
-		// // _hero.css({top:0, left:0, opacity:0, width:w, height:h});
-		// // animate(_delay, _hero, {opacity:1}, 500, "easeOutQuad");
-
-    // anime({
-    //   targets: '_hero',
-    //   opacity: 1
-    // });
-	};
-
-	//-------------------------------------------------------------------------
-
-	Banner.prototype.showScene1 = function()
+	Banner.prototype.showScene = function()
 	{
     let scene1 = anime.timeline();
+		let copy1Scene = anime.timeline();
+		let copy2Scene = anime.timeline();
 
     scene1
       .add({
         targets: '#hero',
         opacity: 1,
-        easing: 'easeOutElastic',
         translateX: {
           value: -20,
-          duration: 6000,
+          duration: 7000,
           easing: 'easeInQuart',
         },
       })
@@ -149,70 +101,87 @@
 				translateY: 75,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=6000'
+				offset: '-=7000'
       })
 			.add({
 				targets: '#ornate-bottom',
 				translateY: -25,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=6000'
+				offset: '-=7000'
+			});
+
+			copy1Scene
+			.add({
+				targets: '#copy01',
+				translateY: -155,
+				opacity: 1,
+				elasticity: 0,
+				offset: 400
 			})
 			.add({
-				
+				targets: '#copy02',
+				translateY: -95,
+				elasticity: 0,
+				opacity: 1,
+				offset: 500
 			})
+			.add({
+				targets: '#copy01',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 2000
+			})
+			.add({
+				targets: '#copy02',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 2100
+			});
 
-		// this.__gradient.css({top:0, left:0, opacity:0});
-		// animate(0, this.__gradient, {opacity:.87}, 300, "easeOutQuart");
+		copy2Scene
+			.add({
+				targets: '#copy03',
+				translateY: -170,
+				opacity: 1,
+				elasticity: 0,
+				offset: 2500
+			})
+			.add({
+				targets: '#copy04',
+				translateY: -125,
+				elasticity: 0,
+				opacity: 1,
+				offset: 2600
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -80,
+				elasticity: 0,
+				opacity: 1,
+				offset: 2700
+			})
+			.add({
+				targets: '#copy03',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 4000
+			})
+			.add({
+				targets: '#copy04',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 4100
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 4200
+			});
 
-		// this.showHero( this.__heroWrapper, this.__hero, 100 );
-
-		// this.__ornateTop.css({top:-40, left:0, opacity:0});
-		// animate(400, this.__ornateTop, {top:0, opacity:1}, 550, "easeOutQuart");
-    //
-		// this.__ornateBottom.css({top:40, left:0, opacity:0});
-		// animate(400, this.__ornateBottom, {top:0, opacity:1}, 550, "easeOutQuart");
-    //
-		// var y = 91;
-		// var h = 140;
-		// this.__copyMask.css({top:y, left:0, opacity:1, height:h});
-		// this.__copyOffset.css({top:-y, left:0, opacity:1});
-    //
-		// this.showCopy( this.__copy01, 700);
-		// this.showCopy( this.__copy02, 775);
-		// this.showCopy( this.__copy03, 850);
-    //
-		// var banner = this;
-		// setTimeout(function(){banner.showScene2();}, 3600);
 	};
 
-	Banner.prototype.showScene2 = function()
-	{
-		this.hideCopy( this.__copy01, 0);
-		this.hideCopy( this.__copy02, 75);
-		this.hideCopy( this.__copy03, 150);
-
-		this.showCopy( this.__copy04, 600);
-		this.showCopy( this.__copy05, 675);
-		this.showCopy( this.__copy06, 750);
-
-		var banner = this;
-		setTimeout(function(){banner.showScene3();}, 2800);
-	};
-
-	Banner.prototype.showScene3 = function()
-	{
-		this.hideCopy( this.__copy04, 0);
-		this.hideCopy( this.__copy05, 75);
-		this.hideCopy( this.__copy06, 150);
-
-		this.showCopy( this.__copy07, 600);
-		this.showCopy( this.__copy08, 675);
-		this.showCopy( this.__copy09, 750);
-
-		var banner = this;
-		setTimeout(function(){banner.showResolve();}, 3200);
-	};
 
 	Banner.prototype.showResolve = function()
 	{
