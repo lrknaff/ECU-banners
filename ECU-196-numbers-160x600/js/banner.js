@@ -76,7 +76,7 @@
         opacity: 1,
         translateX: {
           value: -20,
-          duration: 4800,
+          duration: 7100,
           easing: 'easeInQuad',
         },
       })
@@ -85,14 +85,14 @@
 				translateY: 75,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=4800'
+				offset: '-=7100'
       })
 			.add({
 				targets: '#ornate-bottom',
 				translateY: -25,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=4800'
+				offset: '-=7100'
 			});
 
 			copy1Scene
