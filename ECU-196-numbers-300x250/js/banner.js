@@ -11,8 +11,8 @@
 	{
 		this.__allowHoverEffect = false;
 		this.__loopCount = 0;
-		this.__width = 160;
-		this.__height = 600;
+		this.__width = 300;
+		this.__height = 250;
 		this.start();
 	};
 
@@ -74,7 +74,7 @@
       .add({
         targets: '#hero',
         opacity: 1,
-        translateX: {
+        translateY: {
           value: -20,
           duration: 4800,
           easing: 'easeInQuad',
