@@ -32,27 +32,9 @@
 		this.__content = $("#content");
 
 		this.__heroWrapper = $("#hero-wrapper");
-		this.__hero = $("#hero");
-
-		this.__copy01 = $("#copy01");
-		this.__copy02 = $("#copy02");
-		this.__copy03 = $("#copy03");
-		this.__copy04 = $("#copy04");
-		this.__copy05 = $("#copy05");
-		this.__copy06 = $("#copy06");
-		this.__copy07 = $("#copy07");
-		this.__copy08 = $("#copy08");
-		this.__copy09 = $("#copy09");
 
 		this.__ornateTop = $("#ornate-top");
 		this.__ornateBottom = $("#ornate-bottom");
-
-		this.__logoECU = $("#logo-ecu");
-		this.__tagline = $("#tagline");
-
-		this.__cta = $("#cta");
-			this.__ctaOff = $("#cta-off");
-			this.__ctaHover = $("#cta-hover");
 
 		this.__bgExit = $("#bg-exit");
 	};
@@ -82,9 +64,11 @@
 
 	Banner.prototype.showScene = function()
 	{
-    let scene1 = anime.timeline();
+    let scene1     = anime.timeline();
 		let copy1Scene = anime.timeline();
 		let copy2Scene = anime.timeline();
+		let copy3Scene = anime.timeline();
+		let finalScene = anime.timeline();
 
     scene1
       .add({
@@ -92,8 +76,8 @@
         opacity: 1,
         translateX: {
           value: -20,
-          duration: 7000,
-          easing: 'easeInQuart',
+          duration: 4800,
+          easing: 'easeInQuad',
         },
       })
       .add({
@@ -101,14 +85,14 @@
 				translateY: 75,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=7000'
+				offset: '-=4800'
       })
 			.add({
 				targets: '#ornate-bottom',
 				translateY: -25,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=7000'
+				offset: '-=4800'
 			});
 
 			copy1Scene
@@ -180,33 +164,73 @@
 				offset: 4200
 			});
 
-	};
+		copy3Scene
+			.add({
+				targets: '#copy06',
+				translateY: -154,
+				opacity: 1,
+				elasticity: 0,
+				offset: 4600
+			})
+			.add({
+				targets: '#copy07',
+				translateY: -127,
+				elasticity: 0,
+				opacity: 1,
+				offset: 4700
+			})
+			.add({
+				targets: '#copy08',
+				translateY: -80,
+				elasticity: 0,
+				opacity: 1,
+				offset: 4800
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 6800
+			})
+			.add({
+				targets: '#copy07',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 6900
+			})
+			.add({
+				targets: '#copy08',
+				translateY: -1000,
+				easing: 'easeOutQuad',
+				offset: 7000
+			});
 
+		finalScene
+			.add({
+				targets: '#logo-ecu',
+				translateY: -154,
+				opacity: 1,
+				elasticity: 0,
+				offset: 7400
+			})
+			.add({
+				targets: '#tagline',
+				translateY: -100,
+				elasticity: 0,
+				opacity: 1,
+				offset: 7500
+			})
+			.add({
+				targets: '#cta',
+				translateY: -80,
+				elasticity: 0,
+				opacity: 1,
+				offset: 7600
+			});
 
-	Banner.prototype.showResolve = function()
-	{
-		this.hideCopy( this.__copy07, 0);
-		this.hideCopy( this.__copy08, 75);
-		this.hideCopy( this.__copy09, 150);
+		// var banner = this;
+		// setTimeout(function(){banner.end();}, 2500);
 
-		this.__logoECU.css({top:50, left:0, opacity:0});
-		animate(650, this.__logoECU, {top:0, opacity:1}, 600, "easeOutQuart");
-
-		this.__tagline.css({top:0, left:0, opacity:0});
-		animate(1200, this.__tagline, {top:0, opacity:1}, 900, "easeOutQuart");
-
-		var banner = this;
-		setTimeout(function(){banner.showCTA();}, 1600);
-		setTimeout(function(){banner.end();}, 2500);
-	};
-
-	Banner.prototype.showCTA = function()
-	{
-		this.__ctaOff.css({top:0, left:0, opacity:1});
-		this.__ctaHover.css({top:0, left:0, opacity:0});
-
-		this.__cta.css({top:25, left:0, opacity:0});
-		animate(0, this.__cta, {top:0, opacity:1}, 400, "easeOutQuart");
 	};
 
 	//-------------------------------------------------------------------------
