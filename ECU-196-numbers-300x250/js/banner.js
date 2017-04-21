@@ -100,27 +100,29 @@
 				targets: '#copy01',
 				translateY: -145,
 				opacity: 1,
-				elasticity: 0,
+				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
 				translateY: -120,
-				elasticity: 0,
+				elasticity: 100,
 				opacity: 1,
 				offset: 500
 			})
 			.add({
 				targets: '#copy01',
 				translateY: -1000,
-				easing: 'easeOutQuad',
-				offset: 2000
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3000
 			})
 			.add({
 				targets: '#copy02',
 				translateY: -1000,
-				easing: 'easeOutQuad',
-				offset: 2100
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3100
 			});
 
 		copy2Scene
@@ -128,27 +130,29 @@
 				targets: '#copy03',
 				translateY: -150,
 				opacity: 1,
-				elasticity: 0,
-				offset: 2500
+				elasticity: 100,
+				offset: 3500
 			})
 			.add({
 				targets: '#copy04',
 				translateY: -120,
-				elasticity: 0,
+				elasticity: 100,
 				opacity: 1,
-				offset: 2600
+				offset: 3600
 			})
 			.add({
 				targets: '#copy03',
 				translateY: -1000,
-				easing: 'easeOutQuad',
-				offset: 4000
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6100
 			})
 			.add({
 				targets: '#copy04',
 				translateY: -1000,
-				easing: 'easeOutQuad',
-				offset: 4100
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6200
 			});
 
 		copy3Scene
@@ -156,39 +160,47 @@
 				targets: '#copy05',
 				translateY: -148,
 				opacity: 1,
-				elasticity: 0,
-				offset: 4600
-			})
-			.add({
-				targets: '#copy06',
-				translateY: -120,
-				elasticity: 0,
-				opacity: 1,
-				offset: 4700
-			})
-			.add({
-				targets: '#ornate-top',
-				translateY: -1000,
-				easing: 'easeOutQuad',
-				offset: 6500
-			})
-			.add({
-				targets: '#copy05',
-				translateY: -1000,
-				easing: 'easeOutQuad',
+				elasticity: 100,
 				offset: 6600
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -1000,
-				easing: 'easeOutQuad',
+				translateY: -120,
+				elasticity: 100,
+				opacity: 1,
 				offset: 6700
+			})
+			.add({
+				targets: '#ornate-top',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9200
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9300
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9400
 			})
 			.add({
 				targets: '#ornate-bottom',
 				translateY: -1000,
-				easing: 'easeOutQuad',
-				offset: 6800
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9500
 			});
 
 
@@ -197,22 +209,22 @@
 				targets: '#logo-ecu',
 				translateY: -115,
 				opacity: 1,
-				elasticity: 0,
-				offset: 7400
+				elasticity: 100,
+				offset: 9900
 			})
 			.add({
 				targets: '#tagline',
 				translateY: -70,
-				elasticity: 0,
+				elasticity: 100,
 				opacity: 1,
-				offset: 7500
+				offset: 10000
 			})
 			.add({
 				targets: '#cta',
 				translateY: -10,
-				elasticity: 0,
+				elasticity: 100,
 				opacity: 1,
-				offset: 7600
+				offset: 10100
 			});
 
 		// var banner = this;

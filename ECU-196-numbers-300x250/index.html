@@ -34,14 +34,16 @@
 
 			#hero { background: transparent url('images/BG.jpg') no-repeat 0px 0px; top: 0; left: 0; opacity: 0; height: 300px;}
 
-			#copy01 { background: transparent url('images/sprite.png') no-repeat 0 -53px; height: 27px; top: 200px; opacity: 0;}
-			#copy02 { background: transparent url('images/sprite.png') no-repeat 0 -80px; height: 40px;  top: 200px; opacity: 0;}
+      #copy-mask { overflow: hidden; width: 300px; height: 88px; position: absolute; top: 40px;}
 
-			#copy03 { background: transparent url('images/sprite.png') no-repeat 0 -121px; height: 30px;  top: 200px; opacity: 0}
-			#copy04 { background: transparent url('images/sprite.png') no-repeat 0 -150px; height: 45px;  top: 200px; opacity: 0}
+			#copy01 { background: transparent url('images/sprite.png') no-repeat 0 -53px; height: 27px; top: 160px; opacity: 0;}
+			#copy02 { background: transparent url('images/sprite.png') no-repeat 0 -80px; height: 40px;  top: 160px; opacity: 0;}
 
-			#copy05 { background: transparent url('images/sprite.png') no-repeat 0 -196px; height: 25px;  top: 200px; opacity: 0}
-			#copy06 { background: transparent url('images/sprite.png') no-repeat 0 -222px; height: 35px;  top: 200px; opacity: 0}
+			#copy03 { background: transparent url('images/sprite.png') no-repeat 0 -121px; height: 30px;  top: 160px; opacity: 0}
+			#copy04 { background: transparent url('images/sprite.png') no-repeat 0 -150px; height: 45px;  top: 160px; opacity: 0}
+
+			#copy05 { background: transparent url('images/sprite.png') no-repeat 0 -196px; height: 25px;  top: 160px; opacity: 0}
+			#copy06 { background: transparent url('images/sprite.png') no-repeat 0 -222px; height: 35px;  top: 160px; opacity: 0}
 
       #logo-ecu { background: transparent url('images/sprite.png') no-repeat 0 -264px; height: 40px;  top: 200px; opacity: 0}
       #tagline { background: transparent url('images/sprite.png') no-repeat 0 -305px; height: 15px;  top: 200px; opacity: 0}
@@ -67,21 +69,24 @@
 		    			<div id = "hero" class = "animated-content"></div>
 		    		</div>
 
-            <div id = "copy02" class = "animated-content"></div>
-            <div id = "copy01" class = "animated-content"></div>
+            <div id="copy-mask">
+              <div id = "copy02" class = "animated-content"></div>
+              <div id = "copy01" class = "animated-content"></div>
 
-            <div id = "copy03" class = "animated-content"></div>
-            <div id = "copy04" class = "animated-content"></div>
+              <div id = "copy03" class = "animated-content"></div>
+              <div id = "copy04" class = "animated-content"></div>
 
-            <div id = "copy05" class = "animated-content"></div>
-            <div id = "copy06" class = "animated-content"></div>
+              <div id = "copy05" class = "animated-content"></div>
+              <div id = "copy06" class = "animated-content"></div>
+            </div>
 
-			    	<div id = "logo-ecu" class = "animated-content"></div>
-			    	<div id = "tagline" class = "animated-content"></div>
-			    	<div id = "cta" class = "animated-content"></div>
+            <div id = "logo-ecu" class = "animated-content"></div>
+            <div id = "tagline" class = "animated-content"></div>
+            <div id = "cta" class = "animated-content"></div>
 
 				    <div id = "ornate-bottom" class = "animated-content"></div>
 				    <div id = "ornate-top" class = "animated-content"></div>
+
 		    	</div>
 	    	</div>
 
