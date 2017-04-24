@@ -75,21 +75,21 @@
         targets: '#hero',
         opacity: 1,
         translateY: {
-          value: -35,
+          value: -55,
           duration: 6700,
           easing: 'easeInQuad',
         },
       })
       .add({
 				targets: '#ornate-top',
-				translateY: 20,
+				translateY: 30,
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: '-=6700'
       })
 			.add({
 				targets: '#ornate-bottom',
-				translateY: -75,
+				translateY: -60,
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: '-=6700'
@@ -98,14 +98,14 @@
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -145,
+				translateY: -150,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -120,
+				translateY: -115,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
@@ -158,14 +158,14 @@
 		copy3Scene
 			.add({
 				targets: '#copy05',
-				translateY: -148,
+				translateY: -143,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6600
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -120,
+				translateY: -115,
 				elasticity: 100,
 				opacity: 1,
 				offset: 6700
@@ -207,7 +207,7 @@
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -115,
+				translateY: -125,
 				opacity: 1,
 				elasticity: 100,
 				offset: 9900
@@ -221,7 +221,6 @@
 			})
 			.add({
 				targets: '#cta',
-				translateY: -10,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10100
