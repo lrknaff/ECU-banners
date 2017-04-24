@@ -89,7 +89,7 @@
       })
 			.add({
 				targets: '#ornate-bottom',
-				translateY: -60,
+				translateY: -55,
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: '-=6700'
