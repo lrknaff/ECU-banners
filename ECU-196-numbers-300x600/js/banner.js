@@ -11,8 +11,8 @@
 	{
 		this.__allowHoverEffect = false;
 		this.__loopCount = 0;
-		this.__width = 320;
-		this.__height = 480;
+		this.__width = 300;
+		this.__height = 600;
 		this.start();
 	};
 
@@ -128,21 +128,21 @@
 		copy2Scene
 			.add({
 				targets: '#copy03',
-				translateY: -210,
+				translateY: -213,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3500
 			})
 			.add({
 				targets: '#copy04',
-				translateY: -180,
+				translateY: -183,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3600
 			})
 			.add({
 				targets: '#copy05',
-				translateY: -130,
+				translateY: -133,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3700
@@ -172,21 +172,21 @@
 		copy3Scene
 			.add({
 				targets: '#copy06',
-				translateY: -223,
+				translateY: -221,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6800
 			})
 			.add({
 				targets: '#copy07',
-				translateY: -192,
+				translateY: -190,
 				elasticity: 100,
 				opacity: 1,
 				offset: 6900
 			})
 			.add({
 				targets: '#copy08',
-				translateY: -135,
+				translateY: -133,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7000
