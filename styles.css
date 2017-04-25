@@ -78,4 +78,9 @@ body {
 
 h2 {
   cursor: pointer;
+  color: #ac451e;
+}
+
+h6 {
+  color: #00577d;
 }
