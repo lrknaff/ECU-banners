@@ -11,7 +11,7 @@
 	{
 		this.__allowHoverEffect = false;
 		this.__loopCount = 0;
-		this.__width = 160;
+		this.__width = 300;
 		this.__height = 600;
 		this.start();
 	};
@@ -76,43 +76,43 @@
         opacity: 1,
 				scale: {
 					value: [1, 1.1],
-					duration: 7100,
+					duration: 7500,
 					easing: 'easeOutQuad',
 				},
       })
       .add({
 				targets: '#ornate-top',
-				translateY: 50,
+				translateY: 40,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=7100'
+				offset: '-=7500'
       })
 			.add({
 				targets: '#ornate-bottom',
 				translateY: -50,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=7100'
+				offset: '-=7500'
 			});
 
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -154,
+				translateY: -218,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -126,
+				translateY: -193,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
 			})
 			.add({
 				targets: '#copy03',
-				translateY: -91,
+				translateY: -153,
 				elasticity: 100,
 				opacity: 1,
 				offset: 600
@@ -142,21 +142,21 @@
 		copy2Scene
 			.add({
 				targets: '#copy04',
-				translateY: -160,
+				translateY: -224,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3700
 			})
 			.add({
 				targets: '#copy05',
-				translateY: -128,
+				translateY: -194,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3800
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -66,
+				translateY: -123,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3900
@@ -166,41 +166,41 @@
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 6400
+				offset: 6300
 			})
 			.add({
 				targets: '#copy05',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 6500
+				offset: 6400
 			})
 			.add({
 				targets: '#copy06',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
-				offset: 6600
+				offset: 6500
 			});
 
 		copy3Scene
 			.add({
 				targets: '#copy07',
-				translateY: -149,
+				translateY: -218,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6900
 			})
 			.add({
 				targets: '#copy08',
-				translateY: -122,
+				translateY: -187,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7000
 			})
 			.add({
 				targets: '#copy09',
-				translateY: -92,
+				translateY: -152,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7100
@@ -208,6 +208,7 @@
 			.add({
 				targets: '#copy07',
 				translateY: -1000,
+				opacity: 0,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 9600
@@ -215,6 +216,7 @@
 			.add({
 				targets: '#copy08',
 				translateY: -1000,
+				opacity: 0,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 9700
@@ -222,32 +224,33 @@
 			.add({
 				targets: '#copy09',
 				translateY: -1000,
+				opacity: 0,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 9800
 			});
 
+
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -154,
+				translateY: -100,
 				opacity: 1,
 				elasticity: 100,
-				offset: 10200
+				offset: 10100
 			})
 			.add({
 				targets: '#tagline',
-				translateY: -100,
+				translateY: -50,
 				elasticity: 100,
 				opacity: 1,
-				offset: 10300
+				offset: 10200
 			})
 			.add({
 				targets: '#cta',
-				translateY: -80,
 				elasticity: 100,
 				opacity: 1,
-				offset: 10400
+				offset: 10300
 			});
 
 		// var banner = this;

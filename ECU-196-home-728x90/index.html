@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+      <meta http-equiv=Content-Type content="text/html;  charset=ISO-8859-1">
+  		<meta name="viewport" content="width=728, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--728-->
+  		<meta name="ad.size" content = "width=728, height=90">
+
+		  <title>ECU-196: Home 728x90</title>
+
+		  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"> </script>
+
+		<style>
+			/* classes */
+			.pos-absolute { position: absolute; }
+
+			.animated-content {
+				position: absolute;
+				overflow: hidden;
+				width:728px;
+				height:90px;
+				top:0;
+			}
+
+			.mask {
+				position: absolute;
+				overflow: hidden;
+			}
+
+			/* IDs */
+			#bg-exit { background-color:#fff; cursor: pointer; z-index: 99999; }
+			#banner { background-color:#222; overflow:hidden; }
+			#border { border:1px solid #222; opacity:0; }
+			#banner:hover { cursor: hand; }
+
+			#hero1 { background: transparent url('images/BG1.jpg') no-repeat 0px 0px; top: 0; left: 0; opacity: 0;}
+			#hero2 { background: transparent url('images/BG2.jpg') no-repeat 0px 0px; top: 0; right: 0; width: 298px; height: 110px; opacity: 0; transform-origin: right;}
+
+      #copy-mask { overflow: hidden; width: 430px; height: 45px; position: absolute; top: 22px;}
+
+			#copy01 { background: transparent url('images/sprite.png') no-repeat 0 -53px; height: 25px; top: 90px; opacity: 0;}
+
+			#copy02 { background: transparent url('images/sprite.png') no-repeat 0 -83px; height: 25px; top: 90px; opacity: 0;}
+
+			#copy03 { background: transparent url('images/sprite.png') no-repeat 0 -110px; height: 25px; top: 90px; opacity: 0;}
+
+      #logo-ecu { background: transparent url('images/sprite.png') no-repeat 0 -138px; height: 80px;  top: 9px; opacity: 0}
+
+			#ornate-bottom { background: transparent url('images/sprite.png') no-repeat 0 -28px; height: 23px; opacity: 0; top: 90px;}
+			#ornate-top { background: transparent url('images/sprite.png') no-repeat 0 -6px; height: 23px; opacity: 0}
+
+
+		</style>
+    </head>
+
+    <body>
+    	<div id = "container">
+    		<div id = "border" class = "pos-absolute"></div>
+	    	<div id = "banner" class = "pos-absolute">
+		    	<div id = "content" class = "pos-absolute">
+
+		    		<div id = "hero-wrapper" class = "animated-content">
+              <div id = "hero2" class = "animated-content"></div>
+		    			<div id = "hero1" class = "animated-content"></div>
+		    		</div>
+
+            <div id="copy-mask">
+              <div id = "copy01" class = "animated-content"></div>
+
+              <div id = "copy02" class = "animated-content"></div>
+
+              <div id = "copy03" class = "animated-content"></div>
+            </div>
+
+            <div id = "logo-ecu" class = "animated-content"></div>
+
+				    <div id = "ornate-bottom" class = "animated-content"></div>
+				    <div id = "ornate-top" class = "animated-content"></div>
+
+		    	</div>
+	    	</div>
+
+	    	<div id="bg-exit" class = "pos-absolute"></div>
+	    </div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+		<script src="js/jquery.transit.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/banner.js"></script>
+		<script type="text/javascript">
+
+			var clickTag = "https://www.elevationscu.com/";
+
+			$(document).ready(function()
+			{
+				if (Enabler.isInitialized())
+				{
+					enablerInitComplete();
+				} else {
+					Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitComplete);
+				}
+
+				function enablerInitComplete()
+				{
+					if (Enabler.isPageLoaded())
+					{
+					    pageLoadComplete();
+					} else {
+						Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadComplete);
+					}
+
+					function pageLoadComplete()
+					{
+					    var banner = new Banner();
+						banner.render();
+					}
+				}
+			});
+
+		</script>
+    </body>
+</html>
