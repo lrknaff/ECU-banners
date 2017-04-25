@@ -74,11 +74,11 @@
       .add({
         targets: '#hero',
         opacity: 1,
-        translateY: {
-          value: -35,
-          duration: 6700,
-          easing: 'easeInQuad',
-        },
+				scale: {
+					value: [1, 1.1],
+					duration: 6700,
+					easing: 'easeOutQuad',
+				},
       })
       .add({
 				targets: '#ornate-top',
@@ -98,14 +98,14 @@
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -145,
+				translateY: -156,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -120,
+				translateY: -122,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
@@ -128,14 +128,14 @@
 		copy2Scene
 			.add({
 				targets: '#copy03',
-				translateY: -150,
+				translateY: -154,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3500
 			})
 			.add({
 				targets: '#copy04',
-				translateY: -120,
+				translateY: -124,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3600
@@ -158,7 +158,7 @@
 		copy3Scene
 			.add({
 				targets: '#copy05',
-				translateY: -148,
+				translateY: -152,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6600
@@ -207,24 +207,17 @@
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -115,
+				translateY: -150,
 				opacity: 1,
 				elasticity: 100,
 				offset: 9900
 			})
 			.add({
-				targets: '#tagline',
-				translateY: -70,
+				targets: '#cta',
+				translateY: -69,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10000
-			})
-			.add({
-				targets: '#cta',
-				translateY: -10,
-				elasticity: 100,
-				opacity: 1,
-				offset: 10100
 			});
 
 		// var banner = this;
