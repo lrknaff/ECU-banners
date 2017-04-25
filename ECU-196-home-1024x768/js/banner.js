@@ -11,8 +11,8 @@
 	{
 		this.__allowHoverEffect = false;
 		this.__loopCount = 0;
-		this.__width = 768;
-		this.__height = 1024;
+		this.__width = 1024;
+		this.__height = 768;
 		this.start();
 	};
 
@@ -112,7 +112,7 @@
 			})
 			.add({
 				targets: '#copy03',
-				translateY: -200,
+				translateY: -205,
 				elasticity: 100,
 				opacity: 1,
 				offset: 600
@@ -142,21 +142,21 @@
 		copy2Scene
 			.add({
 				targets: '#copy04',
-				translateY: -365,
+				translateY: -370,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3700
 			})
 			.add({
 				targets: '#copy05',
-				translateY: -292,
+				translateY: -297,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3800
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -148,
+				translateY: -153,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3900
@@ -186,21 +186,21 @@
 		copy3Scene
 			.add({
 				targets: '#copy07',
-				translateY: -340,
+				translateY: -343,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6900
 			})
 			.add({
 				targets: '#copy08',
-				translateY: -278,
+				translateY: -281,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7000
 			})
 			.add({
 				targets: '#copy09',
-				translateY: -200,
+				translateY: -203,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7100
@@ -234,14 +234,14 @@
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -177,
+				translateY: -182,
 				opacity: 1,
 				elasticity: 100,
 				offset: 10100
 			})
 			.add({
 				targets: '#tagline',
-				translateY: -77,
+				translateY: -82,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10200
