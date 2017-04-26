@@ -74,23 +74,19 @@
       .add({
         targets: '#hero2',
         opacity: 1,
-        translateY: {
-          value: -15,
-          duration: 6200,
-          easing: 'easeInQuad',
-        },
+        offset: 0
       })
 			.add({
         targets: '#hero1',
         opacity: 1,
-				offset: '-=6200'
+				offset: 0
       })
       .add({
 				targets: '#ornate-top',
 				translateY: 5,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=6200'
+				offset: 0
       })
 			.add({
 				targets: '#ornate-bottom',
@@ -98,6 +94,15 @@
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: '-=7000'
+			})
+			.add({
+				targets: '#hero2',
+				translateY: {
+          value: -15,
+          duration: 6400,
+          easing: 'linear',
+        },
+				offset: 0
 			});
 
 			copy1Scene

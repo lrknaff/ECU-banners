@@ -74,26 +74,30 @@
       .add({
         targets: '#hero',
         opacity: 1,
-				translateY: {
-          value: -15,
-          duration: 7500,
-          easing: 'easeInQuad',
-        },
+				offset: 0
       })
       .add({
 				targets: '#ornate-top',
 				translateY: 40,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=7500'
+				offset: 0
       })
 			.add({
 				targets: '#ornate-bottom',
 				translateY: -50,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: '-=7500'
-			});
+				offset: 0
+			})
+			.add({
+				targets: '#hero',
+				translateY: {
+          value: -25,
+          duration: 7000,
+          easing: 'linear',
+        },
+			})
 
 			copy1Scene
 			.add({
