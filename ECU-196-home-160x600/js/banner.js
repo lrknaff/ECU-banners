@@ -94,10 +94,10 @@
 				targets: '#hero',
 				scale: {
 					value: [1, 1.1],
-					duration: 9000,
-					easing: 'easeInOutCubic',
+					duration: 7000,
+					easing: 'linear',
 				},
-			})
+			});
 
 			copy1Scene
 			.add({
