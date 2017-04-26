@@ -99,8 +99,8 @@
 				targets: '#hero2',
 				scale: {
 					value: [1, 1.1],
-					duration: 9000,
-					easing: 'easeOutQuad',
+					duration: 5800,
+					easing: 'linear',
 				}
 			});
 
