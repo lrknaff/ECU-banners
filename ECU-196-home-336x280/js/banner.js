@@ -90,6 +90,10 @@
 				opacity: 1,
 				offset: 0
 			})
+			// .add({
+			// 	targets: '#shadow',
+			// 	opacity: 1,
+			// })
 			.add({
 				targets: '#hero',
 				scale: {
@@ -196,6 +200,11 @@
 				opacity: 0,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
+				offset: 9400
+			})
+			.add({
+				targets: '#shadow',
+				opacity: 0,
 				offset: 9400
 			})
 			.add({
