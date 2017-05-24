@@ -28,6 +28,7 @@
 	{
 		this.__container = $("#container");
 		this.__border = $("#border");
+		this.__hero2 = $("#hero2");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
 
@@ -72,7 +73,7 @@
 
     scene1
       .add({
-        targets: '#hero',
+        targets: '#hero1',
         opacity: 1,
 				offset: 0
       })
@@ -88,15 +89,6 @@
 				translateY: -50,
 				easing: 'easeOutExpo',
 				opacity: 1,
-				offset: 0
-			})
-			.add({
-				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 7100,
-					easing: 'linear',
-				},
 				offset: 0
 			});
 
@@ -154,17 +146,35 @@
 			})
 			.add({
 				targets: '#copy05',
-				translateY: -292,
+				translateY: -300,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3800
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -148,
+				translateY: -209,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3900
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 3500
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 0,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 6300
 			})
 			.add({
 				targets: '#copy04',
@@ -191,21 +201,21 @@
 		copy3Scene
 			.add({
 				targets: '#copy07',
-				translateY: -340,
+				translateY: -343,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6900
 			})
 			.add({
 				targets: '#copy08',
-				translateY: -278,
+				translateY: -281,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7000
 			})
 			.add({
 				targets: '#copy09',
-				translateY: -200,
+				translateY: -181,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7100
@@ -239,14 +249,14 @@
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -177,
+				translateY: -190,
 				opacity: 1,
 				elasticity: 100,
 				offset: 10100
 			})
 			.add({
 				targets: '#tagline',
-				translateY: -77,
+				translateY: -90,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10200
@@ -256,10 +266,19 @@
 				elasticity: 100,
 				opacity: 1,
 				offset: 10300
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 9800
 			});
 
-		// var banner = this;
-		// setTimeout(function(){banner.end();}, 2500);
+		var banner = this;
+		setTimeout(function(){banner.end();}, 10300);
 
 	};
 
@@ -309,12 +328,12 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		animate(0, this.__ctaHover, {opacity:1}, 500, "easeOutQuad");
+		animate(0, this.__hero2, {opacity:1}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__ctaHover, {opacity:0}, 200, "easeOutQuad");
+		animate(25, this.__hero2, {opacity:0}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.clickThrough = function()
