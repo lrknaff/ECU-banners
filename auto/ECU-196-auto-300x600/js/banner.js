@@ -28,6 +28,7 @@
 	{
 		this.__container = $("#container");
 		this.__border = $("#border");
+		this.__hero2 = $("#hero2");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
 
@@ -91,166 +92,193 @@
 				offset: 0
 			});
 
-		// copy1Scene
-		// 	.add({
-		// 		targets: '#copy01',
-		// 		translateY: -218,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 400
-		// 	})
-		// 	.add({
-		// 		targets: '#copy02',
-		// 		translateY: -193,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 500
-		// 	})
-		// 	.add({
-		// 		targets: '#copy03',
-		// 		translateY: -153,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 600
-		// 	})
-		// 	.add({
-		// 		targets: '#copy01',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 3100
-		// 	})
-		// 	.add({
-		// 		targets: '#copy02',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 3200
-		// 	})
-		// 	.add({
-		// 		targets: '#copy03',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 3300
-		// 	});
-		//
-		// copy2Scene
-		// 	.add({
-		// 		targets: '#copy04',
-		// 		translateY: -224,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 3700
-		// 	})
-		// 	.add({
-		// 		targets: '#copy05',
-		// 		translateY: -194,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 3800
-		// 	})
-		// 	.add({
-		// 		targets: '#copy06',
-		// 		translateY: -123,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 3900
-		// 	})
-		// 	.add({
-		// 		targets: '#copy04',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 6300
-		// 	})
-		// 	.add({
-		// 		targets: '#copy05',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 6400
-		// 	})
-		// 	.add({
-		// 		targets: '#copy06',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 6500
-		// 	});
-		//
-		// copy3Scene
-		// 	.add({
-		// 		targets: '#copy07',
-		// 		translateY: -218,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 6900
-		// 	})
-		// 	.add({
-		// 		targets: '#copy08',
-		// 		translateY: -187,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 7000
-		// 	})
-		// 	.add({
-		// 		targets: '#copy09',
-		// 		translateY: -152,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 7100
-		// 	})
-		// 	.add({
-		// 		targets: '#copy07',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9600
-		// 	})
-		// 	.add({
-		// 		targets: '#copy08',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9700
-		// 	})
-		// 	.add({
-		// 		targets: '#copy09',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9800
-		// 	});
-		//
-		//
-		// finalScene
-		// 	.add({
-		// 		targets: '#logo-ecu',
-		// 		translateY: -100,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 10100
-		// 	})
-		// 	.add({
-		// 		targets: '#tagline',
-		// 		translateY: -50,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 10200
-		// 	})
-		// 	.add({
-		// 		targets: '#cta',
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 10300
-		// 	});
+		copy1Scene
+			.add({
+				targets: '#copy01',
+				translateY: -218,
+				opacity: 1,
+				elasticity: 100,
+				offset: 400
+			})
+			.add({
+				targets: '#copy02',
+				translateY: -193,
+				elasticity: 100,
+				opacity: 1,
+				offset: 500
+			})
+			.add({
+				targets: '#copy03',
+				translateY: -148,
+				elasticity: 100,
+				opacity: 1,
+				offset: 600
+			})
+			.add({
+				targets: '#copy01',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3100
+			})
+			.add({
+				targets: '#copy02',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3200
+			})
+			.add({
+				targets: '#copy03',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3300
+			});
 
-		// var banner = this;
-		// setTimeout(function(){banner.end();}, 2500);
+		copy2Scene
+			.add({
+				targets: '#copy04',
+				translateY: -226,
+				opacity: 1,
+				elasticity: 100,
+				offset: 3700
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -196,
+				elasticity: 100,
+				opacity: 1,
+				offset: 3800
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -151,
+				elasticity: 100,
+				opacity: 1,
+				offset: 3900
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 3100
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 0,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 6300
+			})
+			.add({
+				targets: '#copy04',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6300
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6400
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6500
+			});
+
+		copy3Scene
+			.add({
+				targets: '#copy07',
+				translateY: -220,
+				opacity: 1,
+				elasticity: 100,
+				offset: 6900
+			})
+			.add({
+				targets: '#copy08',
+				translateY: -189,
+				elasticity: 100,
+				opacity: 1,
+				offset: 7000
+			})
+			.add({
+				targets: '#copy09',
+				translateY: -140,
+				elasticity: 100,
+				opacity: 1,
+				offset: 7100
+			})
+			.add({
+				targets: '#copy07',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9600
+			})
+			.add({
+				targets: '#copy08',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9700
+			})
+			.add({
+				targets: '#copy09',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9800
+			});
+
+
+		finalScene
+			.add({
+				targets: '#logo-ecu',
+				translateY: -100,
+				opacity: 1,
+				elasticity: 100,
+				offset: 10100
+			})
+			.add({
+				targets: '#tagline',
+				translateY: -50,
+				elasticity: 100,
+				opacity: 1,
+				offset: 10200
+			})
+			.add({
+				targets: '#cta',
+				elasticity: 100,
+				opacity: 1,
+				offset: 10300
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 9300
+			});
+
+		var banner = this;
+		setTimeout(function(){banner.end();}, 10300);
 
 	};
 
@@ -300,12 +328,12 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		animate(0, this.__ctaHover, {opacity:1}, 500, "easeOutQuad");
+		animate(0, this.__hero2, {opacity:1}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__ctaHover, {opacity:0}, 200, "easeOutQuad");
+		animate(25, this.__hero2, {opacity:0}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.clickThrough = function()

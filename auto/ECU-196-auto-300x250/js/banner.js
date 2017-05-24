@@ -245,7 +245,7 @@
 			});
 
 		var banner = this;
-		setTimeout(function(){banner.end();}, 9500);
+		setTimeout(function(){banner.end();}, 10000);
 
 	};
 
