@@ -28,6 +28,7 @@
 	{
 		this.__container = $("#container");
 		this.__border = $("#border");
+		this.__hero3 = $("#hero3");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
 
@@ -94,14 +95,6 @@
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: 0
-			})
-			.add({
-				targets: '#hero2',
-				scale: {
-					value: [1, 1.1],
-					duration: 5800,
-					easing: 'linear',
-				}
 			});
 
 			copy1Scene
@@ -127,6 +120,24 @@
 				opacity: 1,
 				elasticity: 100,
 				offset: 3200
+			})
+			.add({
+				targets: '#hero3',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 2700
+			})
+			.add({
+				targets: '#hero3',
+				opacity: {
+					value: 0,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 5700
 			})
 			.add({
 				targets: '#copy02',
@@ -175,10 +186,19 @@
 				opacity: 1,
 				duration: 2000,
 				offset: 9500
+			})
+			.add({
+				targets: '#hero3',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 9000
 			});
 
-		// var banner = this;
-		// setTimeout(function(){banner.end();}, 2500);
+		var banner = this;
+		setTimeout(function(){banner.end();}, 9500);
 
 	};
 
@@ -228,12 +248,12 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		animate(0, this.__ctaHover, {opacity:1}, 500, "easeOutQuad");
+		animate(0, this.__hero3, {opacity:1}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__ctaHover, {opacity:0}, 200, "easeOutQuad");
+		animate(25, this.__hero3, {opacity:0}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.clickThrough = function()
