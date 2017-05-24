@@ -28,6 +28,7 @@
 	{
 		this.__container = $("#container");
 		this.__border = $("#border");
+		this.__hero2 = $("#hero2");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
 
@@ -106,123 +107,150 @@
 				opacity: 1,
 				offset: 500
 			})
-		// 	.add({
-		// 		targets: '#copy01',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 3000
-		// 	})
-		// 	.add({
-		// 		targets: '#copy02',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 3100
-		// 	});
-		//
-		// copy2Scene
-		// 	.add({
-		// 		targets: '#copy03',
-		// 		translateY: -154,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 3500
-		// 	})
-		// 	.add({
-		// 		targets: '#copy04',
-		// 		translateY: -124,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 3600
-		// 	})
-		// 	.add({
-		// 		targets: '#copy03',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 6100
-		// 	})
-		// 	.add({
-		// 		targets: '#copy04',
-		// 		translateY: -1000,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 6200
-		// 	});
-		//
-		// copy3Scene
-		// 	.add({
-		// 		targets: '#copy05',
-		// 		translateY: -152,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 6600
-		// 	})
-		// 	.add({
-		// 		targets: '#copy06',
-		// 		translateY: -120,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 6700
-		// 	})
-		// 	.add({
-		// 		targets: '#ornate-top',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9200
-		// 	})
-		// 	.add({
-		// 		targets: '#copy05',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9300
-		// 	})
-		// 	.add({
-		// 		targets: '#copy06',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9400
-		// 	})
-		// 	.add({
-		// 		targets: '#shadow',
-		// 		opacity: 0,
-		// 		offset: 9400
-		// 	})
-		// 	.add({
-		// 		targets: '#ornate-bottom',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9500
-		// 	});
-		//
-		//
-		// finalScene
-		// 	.add({
-		// 		targets: '#logo-ecu',
-		// 		translateY: -130,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 9900
-		// 	})
-		// 	.add({
-		// 		targets: '#cta',
-		// 		translateY: -39,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 10000
-		// 	});
+			.add({
+				targets: '#copy01',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3000
+			})
+			.add({
+				targets: '#copy02',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 3100
+			});
 
-		// var banner = this;
-		// setTimeout(function(){banner.end();}, 2500);
+		copy2Scene
+			.add({
+				targets: '#copy03',
+				translateY: -144,
+				opacity: 1,
+				elasticity: 100,
+				offset: 3500
+			})
+			.add({
+				targets: '#copy04',
+				translateY: -103,
+				elasticity: 100,
+				opacity: 1,
+				offset: 3600
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 3100
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 0,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 6100
+			})
+			.add({
+				targets: '#copy03',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6100
+			})
+			.add({
+				targets: '#copy04',
+				translateY: -1000,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 6200
+			});
+
+		copy3Scene
+			.add({
+				targets: '#copy05',
+				translateY: -149,
+				opacity: 1,
+				elasticity: 100,
+				offset: 6600
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -117,
+				elasticity: 100,
+				opacity: 1,
+				offset: 6700
+			})
+			.add({
+				targets: '#ornate-top',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9200
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9300
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9400
+			})
+			.add({
+				targets: '#shadow',
+				opacity: 0,
+				offset: 9400
+			})
+			.add({
+				targets: '#ornate-bottom',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9500
+			});
+
+
+		finalScene
+			.add({
+				targets: '#logo-ecu',
+				translateY: -146,
+				opacity: 1,
+				elasticity: 100,
+				offset: 9900
+			})
+			.add({
+				targets: '#cta',
+				translateY: -29,
+				elasticity: 100,
+				opacity: 1,
+				offset: 10000
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 9500
+			});
+
+		var banner = this;
+		setTimeout(function(){banner.end();}, 10000);
 
 	};
 
@@ -272,12 +300,12 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		animate(0, this.__ctaHover, {opacity:1}, 500, "easeOutQuad");
+		animate(0, this.__hero2, {opacity:1}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__ctaHover, {opacity:0}, 200, "easeOutQuad");
+		animate(25, this.__hero2, {opacity:0}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.clickThrough = function()
