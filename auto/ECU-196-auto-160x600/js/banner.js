@@ -28,6 +28,8 @@
 	{
 		this.__container = $("#container");
 		this.__border = $("#border");
+		this.__hero1 = $("#hero1");
+		this.__hero2 = $("#hero2");
 		this.__banner = $("#banner");
 		this.__content = $("#content");
 
@@ -72,7 +74,7 @@
 
     scene1
       .add({
-        targets: '#hero',
+        targets: '#hero1',
         opacity: 1,
 				offset: 0
       })
@@ -89,34 +91,26 @@
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: 0
-			})
-			.add({
-				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 7000,
-					easing: 'linear',
-				},
 			});
 
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -154,
+				translateY: -149,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -126,
+				translateY: -121,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
 			})
 			.add({
 				targets: '#copy03',
-				translateY: -91,
+				translateY: -86,
 				elasticity: 100,
 				opacity: 1,
 				offset: 600
@@ -146,24 +140,42 @@
 		copy2Scene
 			.add({
 				targets: '#copy04',
-				translateY: -160,
+				translateY: -165,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3700
 			})
 			.add({
 				targets: '#copy05',
-				translateY: -128,
+				translateY: -133,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3800
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -66,
+				translateY: -91,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3900
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 3000
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 0,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 6400
 			})
 			.add({
 				targets: '#copy04',
@@ -204,7 +216,7 @@
 			})
 			.add({
 				targets: '#copy09',
-				translateY: -92,
+				translateY: -84,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7100
@@ -241,7 +253,7 @@
 			})
 			.add({
 				targets: '#tagline',
-				translateY: -100,
+				translateY: -103,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10300
@@ -252,10 +264,19 @@
 				elasticity: 100,
 				opacity: 1,
 				offset: 10400
+			})
+			.add({
+				targets: '#hero2',
+				opacity: {
+					value: 1,
+					duration: 1000,
+					easing: 'linear',
+				},
+				offset: 9400
 			});
 
-		// var banner = this;
-		// setTimeout(function(){banner.end();}, 2500);
+		var banner = this;
+		setTimeout(function(){banner.end();}, 10400);
 
 	};
 
@@ -305,12 +326,12 @@
 
 	Banner.prototype.onMouseOver = function()
 	{
-		animate(0, this.__ctaHover, {opacity:1}, 500, "easeOutQuad");
+		animate(0, this.__hero2, {opacity:1}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__ctaHover, {opacity:0}, 200, "easeOutQuad");
+		animate(25, this.__hero2, {opacity:0}, 200, "easeOutQuad");
 	};
 
 	Banner.prototype.clickThrough = function()

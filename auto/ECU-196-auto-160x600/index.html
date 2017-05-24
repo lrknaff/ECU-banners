@@ -5,7 +5,7 @@
   		<meta name="viewport" content="width=160, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
   		<meta name="ad.size" content = "width=160, height=600">
 
-		  <title>ECU-196: Home 160x600</title>
+		  <title>ECU-196: Auto 160x600</title>
 
 		  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"> </script>
 
@@ -32,25 +32,27 @@
 			#border { border:1px solid #222; opacity:0; }
 			#banner:hover { cursor: hand; }
 
-			#hero { background: transparent url('images/BG.jpg') no-repeat 0px 0px; top: 0; left: 0; opacity: 0; transform-origin: right bottom;}
+			#hero1 { background: transparent url('images/BG1.jpg') no-repeat 0px 0px; top: 0; left: 0; opacity: 0; transform-origin: right bottom;}
 
-      #copy-mask { overflow: hidden; width: 160px; height: 175px; position: absolute; top: 77px;}
+			#hero2 { background: transparent url('images/BG2.jpg') no-repeat 0px 0px; top: 0; left: 0; opacity: 0; transform-origin: right bottom;}
 
-			#copy01 { background: transparent url('images/sprite.png') no-repeat 0 -186px; height: 25px; top: 187px; opacity: 0;}
-			#copy02 { background: transparent url('images/sprite.png') no-repeat 0 -214px; height: 34px;  top: 187px; opacity: 0;}
-			#copy03 { background: transparent url('images/sprite.png') no-repeat 0 -248px; height: 43px;  top: 187px; opacity: 0}
+      #copy-mask { overflow: hidden; width: 160px; height: 175px; position: absolute; top: 80px;}
 
-			#copy04 { background: transparent url('images/sprite.png') no-repeat 0 -63px; height: 28px; top: 187px; opacity: 0;}
-			#copy05 { background: transparent url('images/sprite.png') no-repeat 0 -92px; height: 57px;  top: 187px; opacity: 0;}
-			#copy06 { background: transparent url('images/sprite.png') no-repeat 0 -154px; height: 35px;  top: 187px; opacity: 0}
+			#copy01 { background: transparent url('images/sprite.png') no-repeat 0 -70px; height: 25px; top: 187px; opacity: 0;}
+			#copy02 { background: transparent url('images/sprite.png') no-repeat 0 -100px; height: 40px;  top: 187px; opacity: 0;}
+			#copy03 { background: transparent url('images/sprite.png') no-repeat 0 -137px; height: 43px;  top: 187px; opacity: 0}
 
-			#copy07 { background: transparent url('images/sprite.png') no-repeat 0 -295px; height: 25px;  top: 187px; opacity: 0}
-			#copy08 { background: transparent url('images/sprite.png') no-repeat 0 -321px; height: 30px;  top: 187px; opacity: 0}
-			#copy09 { background: transparent url('images/sprite.png') no-repeat 0 -351px; height: 43px;  top: 187px; opacity: 0}
+			#copy04 { background: transparent url('images/sprite.png') no-repeat 0 -182px; height: 28px; top: 187px; opacity: 0;}
+			#copy05 { background: transparent url('images/sprite.png') no-repeat 0 -214px; height: 43px;  top: 187px; opacity: 0;}
+			#copy06 { background: transparent url('images/sprite.png') no-repeat 0 -256px; height: 57px;  top: 187px; opacity: 0}
 
-      #logo-ecu { background: transparent url('images/sprite.png') no-repeat 0 -397px; height: 40px;  top: 187px; opacity: 0}
-      #tagline { background: transparent url('images/sprite.png') no-repeat 0 -446px; height: 15px;  top: 187px; opacity: 0}
-      #cta { background: transparent url('images/sprite.png') no-repeat 0 -464px; height: 45px;  top: 187px; opacity: 0}
+			#copy07 { background: transparent url('images/sprite.png') no-repeat 0 -320px; height: 25px;  top: 187px; opacity: 0}
+			#copy08 { background: transparent url('images/sprite.png') no-repeat 0 -346px; height: 43px;  top: 187px; opacity: 0}
+			#copy09 { background: transparent url('images/sprite.png') no-repeat 0 -384px; height: 43px;  top: 187px; opacity: 0}
+
+      #logo-ecu { background: transparent url('images/sprite.png') no-repeat 0 -430px; height: 40px;  top: 187px; opacity: 0}
+      #tagline { background: transparent url('images/sprite.png') no-repeat 0 -477px; height: 15px;  top: 187px; opacity: 0}
+      #cta { background: transparent url('images/sprite.png') no-repeat 0 -501px; height: 45px;  top: 187px; opacity: 0}
 
 			#ornate-bottom { background: transparent url('images/sprite.png') no-repeat 0 -33px; height: 30px; opacity: 0; top: 300px;}
 			#ornate-top { background: transparent url('images/sprite.png') no-repeat 0 0; height: 30px; opacity: 0}
@@ -66,7 +68,8 @@
 		    	<div id = "content" class = "pos-absolute">
 
 		    		<div id = "hero-wrapper" class = "animated-content">
-		    			<div id = "hero" class = "animated-content"></div>
+		    			<div id = "hero1" class = "animated-content"></div>
+		    			<div id = "hero2" class = "animated-content"></div>
 		    		</div>
 
             <div id = "copy-mask">
@@ -92,10 +95,6 @@
 
 		    	</div>
 	    	</div>
-
-		    <!--
-	    	<div id = "layout-guide" class = "pos-absolute"><img src = "../../_guide/01-auto/160x600/01.jpg"></div>
-	    	-->
 
 	    	<div id="bg-exit" class = "pos-absolute"></div>
 	    </div>
