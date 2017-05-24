@@ -331,7 +331,7 @@
 
 	Banner.prototype.onMouseOut = function()
 	{
-		animate(25, this.__hero2, {opacity:0}, 200, "easeOutQuad");
+		animate(25, this.__hero2, {opacity:0}, 500, "easeOutQuad");
 	};
 
 	Banner.prototype.clickThrough = function()
