@@ -165,7 +165,7 @@
 					duration: 1000,
 					easing: 'linear',
 				},
-				offset: 3100
+				offset: 3300
 			})
 			.add({
 				targets: '#hero2',
@@ -274,7 +274,7 @@
 					duration: 1000,
 					easing: 'linear',
 				},
-				offset: 9300
+				offset: 9800
 			});
 
 		var banner = this;

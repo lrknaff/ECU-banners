@@ -144,7 +144,7 @@
 					duration: 1000,
 					easing: 'linear',
 				},
-				offset: 2700
+				offset: 3000
 			})
 			.add({
 				targets: '#hero2',
