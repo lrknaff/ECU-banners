@@ -159,24 +159,24 @@
 				opacity: 1,
 				offset: 3900
 			})
-			.add({
-				targets: '#hero2',
-				opacity: {
-					value: 1,
-					duration: 1000,
-					easing: 'linear',
-				},
-				offset: 3000
-			})
-			.add({
-				targets: '#hero2',
-				opacity: {
-					value: 0,
-					duration: 1000,
-					easing: 'linear',
-				},
-				offset: 6400
-			})
+			// .add({
+			// 	targets: '#hero2',
+			// 	opacity: {
+			// 		value: 1,
+			// 		duration: 1000,
+			// 		easing: 'linear',
+			// 	},
+			// 	offset: 3000
+			// })
+			// .add({
+			// 	targets: '#hero2',
+			// 	opacity: {
+			// 		value: 0,
+			// 		duration: 1000,
+			// 		easing: 'linear',
+			// 	},
+			// 	offset: 6400
+			// })
 			.add({
 				targets: '#copy04',
 				translateY: -1000,
