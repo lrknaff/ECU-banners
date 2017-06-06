@@ -122,24 +122,6 @@
 				offset: 3200
 			})
 			.add({
-				targets: '#hero3',
-				opacity: {
-					value: 1,
-					duration: 1000,
-					easing: 'linear',
-				},
-				offset: 2700
-			})
-			.add({
-				targets: '#hero3',
-				opacity: {
-					value: 0,
-					duration: 1000,
-					easing: 'linear',
-				},
-				offset: 5700
-			})
-			.add({
 				targets: '#copy02',
 				translateY: -500,
 				easing: 'easeInOutCubic',
