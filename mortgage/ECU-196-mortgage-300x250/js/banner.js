@@ -92,11 +92,16 @@
 			})
 			.add({
 				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 6700,
-					easing: 'linear',
-				},
+				translateX: {
+          value: -15,
+          duration: 6700,
+          easing: 'linear',
+        },
+				translateY: {
+          value: 15,
+          duration: 6700,
+          easing: 'linear',
+        },
 			});
 
 			copy1Scene
