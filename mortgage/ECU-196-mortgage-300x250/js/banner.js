@@ -107,14 +107,14 @@
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -156,
+				translateY: -155,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -122,
+				translateY: -115,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
@@ -137,14 +137,14 @@
 		copy2Scene
 			.add({
 				targets: '#copy03',
-				translateY: -154,
+				translateY: -150,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3500
 			})
 			.add({
 				targets: '#copy04',
-				translateY: -124,
+				translateY: -119,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3600
@@ -163,71 +163,71 @@
 				elasticity: 100,
 				offset: 6200
 			});
-
-		copy3Scene
-			.add({
-				targets: '#copy05',
-				translateY: -152,
-				opacity: 1,
-				elasticity: 100,
-				offset: 6600
-			})
-			.add({
-				targets: '#copy06',
-				translateY: -120,
-				elasticity: 100,
-				opacity: 1,
-				offset: 6700
-			})
-			.add({
-				targets: '#ornate-top',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9200
-			})
-			.add({
-				targets: '#copy05',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9300
-			})
-			.add({
-				targets: '#copy06',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9400
-			})
-			.add({
-				targets: '#ornate-bottom',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9500
-			});
-
-
-		finalScene
-			.add({
-				targets: '#logo-ecu',
-				translateY: -150,
-				opacity: 1,
-				elasticity: 100,
-				offset: 9900
-			})
-			.add({
-				targets: '#cta',
-				translateY: -69,
-				elasticity: 100,
-				opacity: 1,
-				offset: 10000
-			});
+		
+		// copy3Scene
+		// 	.add({
+		// 		targets: '#copy05',
+		// 		translateY: -152,
+		// 		opacity: 1,
+		// 		elasticity: 100,
+		// 		offset: 6600
+		// 	})
+		// 	.add({
+		// 		targets: '#copy06',
+		// 		translateY: -120,
+		// 		elasticity: 100,
+		// 		opacity: 1,
+		// 		offset: 6700
+		// 	})
+		// 	.add({
+		// 		targets: '#ornate-top',
+		// 		translateY: -1000,
+		// 		opacity: 0,
+		// 		easing: 'easeInOutCubic',
+		// 		elasticity: 100,
+		// 		offset: 9200
+		// 	})
+		// 	.add({
+		// 		targets: '#copy05',
+		// 		translateY: -1000,
+		// 		opacity: 0,
+		// 		easing: 'easeInOutCubic',
+		// 		elasticity: 100,
+		// 		offset: 9300
+		// 	})
+		// 	.add({
+		// 		targets: '#copy06',
+		// 		translateY: -1000,
+		// 		opacity: 0,
+		// 		easing: 'easeInOutCubic',
+		// 		elasticity: 100,
+		// 		offset: 9400
+		// 	})
+		// 	.add({
+		// 		targets: '#ornate-bottom',
+		// 		translateY: -1000,
+		// 		opacity: 0,
+		// 		easing: 'easeInOutCubic',
+		// 		elasticity: 100,
+		// 		offset: 9500
+		// 	});
+		//
+		//
+		// finalScene
+		// 	.add({
+		// 		targets: '#logo-ecu',
+		// 		translateY: -150,
+		// 		opacity: 1,
+		// 		elasticity: 100,
+		// 		offset: 9900
+		// 	})
+		// 	.add({
+		// 		targets: '#cta',
+		// 		translateY: -69,
+		// 		elasticity: 100,
+		// 		opacity: 1,
+		// 		offset: 10000
+		// 	});
 
 		// var banner = this;
 		// setTimeout(function(){banner.end();}, 2500);
