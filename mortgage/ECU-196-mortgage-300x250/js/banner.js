@@ -179,55 +179,55 @@
 				opacity: 1,
 				offset: 6700
 			})
-		// 	.add({
-		// 		targets: '#ornate-top',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9200
-		// 	})
-		// 	.add({
-		// 		targets: '#copy05',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9300
-		// 	})
-		// 	.add({
-		// 		targets: '#copy06',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9400
-		// 	})
-		// 	.add({
-		// 		targets: '#ornate-bottom',
-		// 		translateY: -1000,
-		// 		opacity: 0,
-		// 		easing: 'easeInOutCubic',
-		// 		elasticity: 100,
-		// 		offset: 9500
-		// 	});
-		//
-		//
-		// finalScene
-		// 	.add({
-		// 		targets: '#logo-ecu',
-		// 		translateY: -150,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 9900
-		// 	})
-		// 	.add({
-		// 		targets: '#cta',
-		// 		translateY: -69,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 10000
-		// 	});
+			.add({
+				targets: '#ornate-top',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9200
+			})
+			.add({
+				targets: '#copy05',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9300
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9400
+			})
+			.add({
+				targets: '#ornate-bottom',
+				translateY: -1000,
+				opacity: 0,
+				easing: 'easeInOutCubic',
+				elasticity: 100,
+				offset: 9500
+			});
+
+
+		finalScene
+			.add({
+				targets: '#logo-ecu',
+				translateY: -150,
+				opacity: 1,
+				elasticity: 100,
+				offset: 9900
+			})
+			.add({
+				targets: '#cta',
+				translateY: -69,
+				elasticity: 100,
+				opacity: 1,
+				offset: 10000
+			});
 
 		// var banner = this;
 		// setTimeout(function(){banner.end();}, 2500);
