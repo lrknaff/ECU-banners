@@ -163,22 +163,22 @@
 				elasticity: 100,
 				offset: 6200
 			});
-		
-		// copy3Scene
-		// 	.add({
-		// 		targets: '#copy05',
-		// 		translateY: -152,
-		// 		opacity: 1,
-		// 		elasticity: 100,
-		// 		offset: 6600
-		// 	})
-		// 	.add({
-		// 		targets: '#copy06',
-		// 		translateY: -120,
-		// 		elasticity: 100,
-		// 		opacity: 1,
-		// 		offset: 6700
-		// 	})
+
+		copy3Scene
+			.add({
+				targets: '#copy05',
+				translateY: -152,
+				opacity: 1,
+				elasticity: 100,
+				offset: 6600
+			})
+			.add({
+				targets: '#copy06',
+				translateY: -120,
+				elasticity: 100,
+				opacity: 1,
+				offset: 6700
+			})
 		// 	.add({
 		// 		targets: '#ornate-top',
 		// 		translateY: -1000,
