@@ -97,9 +97,9 @@
 			})
 			.add({
 				targets: '#hero2',
-				scale: {
-					value: [1, 1.1],
-					duration: 5800,
+				translateY: {
+					value: 15,
+					duration: 7000,
 					easing: 'linear',
 				}
 			});
@@ -107,7 +107,7 @@
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -79,
+				translateY: -82,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
