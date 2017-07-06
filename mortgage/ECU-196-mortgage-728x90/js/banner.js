@@ -99,7 +99,7 @@
 				targets: '#hero2',
 				translateY: {
 					value: 15,
-					duration: 7000,
+					duration: 6000,
 					easing: 'linear',
 				}
 			});
