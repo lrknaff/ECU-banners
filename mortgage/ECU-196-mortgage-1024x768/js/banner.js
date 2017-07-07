@@ -78,49 +78,46 @@
       })
       .add({
 				targets: '#ornate-top',
-				translateY: 40,
+				translateY: 118,
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: 0
       })
 			.add({
 				targets: '#ornate-bottom',
-				translateY: -50,
+				translateY: -93,
 				easing: 'easeOutExpo',
 				opacity: 1,
 				offset: 0
 			})
 			.add({
 				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 7500,
+				translateX: {
+					value: -15,
+					duration: 7000,
 					easing: 'linear',
 				},
-				offset: 0
+				translateY: {
+					value: 15,
+					duration: 7000,
+					easing: 'linear',
+				},
 			});
 
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -350,
+				translateY: -355,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -293,
+				translateY: -259,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
-			})
-			.add({
-				targets: '#copy03',
-				translateY: -205,
-				elasticity: 100,
-				opacity: 1,
-				offset: 600
 			})
 			.add({
 				targets: '#copy01',
@@ -135,83 +132,55 @@
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 3200
-			})
-			.add({
-				targets: '#copy03',
-				translateY: -1000,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 3300
 			});
 
 		copy2Scene
 			.add({
-				targets: '#copy04',
+				targets: '#copy03',
 				translateY: -370,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3700
 			})
 			.add({
-				targets: '#copy05',
-				translateY: -297,
+				targets: '#copy04',
+				translateY: -294,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3800
 			})
 			.add({
-				targets: '#copy06',
-				translateY: -153,
-				elasticity: 100,
-				opacity: 1,
-				offset: 3900
-			})
-			.add({
-				targets: '#copy04',
+				targets: '#copy03',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 6300
 			})
 			.add({
-				targets: '#copy05',
+				targets: '#copy04',
 				translateY: -1000,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 6400
-			})
-			.add({
-				targets: '#copy06',
-				translateY: -1000,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 6500
 			});
 
 		copy3Scene
 			.add({
-				targets: '#copy07',
-				translateY: -343,
+				targets: '#copy05',
+				translateY: -358,
 				opacity: 1,
 				elasticity: 100,
 				offset: 6900
 			})
 			.add({
-				targets: '#copy08',
-				translateY: -281,
+				targets: '#copy06',
+				translateY: -296,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7000
 			})
 			.add({
-				targets: '#copy09',
-				translateY: -203,
-				elasticity: 100,
-				opacity: 1,
-				offset: 7100
-			})
-			.add({
-				targets: '#copy07',
+				targets: '#copy05',
 				translateY: -1000,
 				opacity: 0,
 				easing: 'easeInOutCubic',
@@ -219,34 +188,26 @@
 				offset: 9600
 			})
 			.add({
-				targets: '#copy08',
+				targets: '#copy06',
 				translateY: -1000,
 				opacity: 0,
 				easing: 'easeInOutCubic',
 				elasticity: 100,
 				offset: 9700
-			})
-			.add({
-				targets: '#copy09',
-				translateY: -1000,
-				opacity: 0,
-				easing: 'easeInOutCubic',
-				elasticity: 100,
-				offset: 9800
 			});
 
 
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -182,
+				translateY: -135,
 				opacity: 1,
 				elasticity: 100,
 				offset: 10100
 			})
 			.add({
 				targets: '#tagline',
-				translateY: -82,
+				translateY: -29,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10200
