@@ -92,13 +92,18 @@
 			})
 			.add({
 				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 7100,
+				translateX: {
+					value: -15,
+					duration: 7000,
 					easing: 'linear',
 				},
-				offset: 0
+				translateY: {
+					value: 15,
+					duration: 7000,
+					easing: 'linear',
+				},
 			});
+
 
 			copy1Scene
 			.add({
@@ -110,14 +115,14 @@
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -293,
+				translateY: -244,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
 			})
 			.add({
 				targets: '#copy03',
-				translateY: -200,
+				translateY: -168,
 				elasticity: 100,
 				opacity: 1,
 				offset: 600
@@ -154,14 +159,14 @@
 			})
 			.add({
 				targets: '#copy05',
-				translateY: -292,
+				translateY: -246,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3800
 			})
 			.add({
 				targets: '#copy06',
-				translateY: -148,
+				translateY: -168,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3900
@@ -205,7 +210,7 @@
 			})
 			.add({
 				targets: '#copy09',
-				translateY: -200,
+				translateY: -172,
 				elasticity: 100,
 				opacity: 1,
 				offset: 7100
