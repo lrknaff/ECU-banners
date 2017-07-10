@@ -216,14 +216,14 @@
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -150,
+				translateY: -128,
 				opacity: 1,
 				elasticity: 100,
 				offset: 9900
 			})
 			.add({
 				targets: '#cta',
-				translateY: -69,
+				translateY: -45,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10000
