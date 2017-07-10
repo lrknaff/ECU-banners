@@ -70,7 +70,7 @@
 		let copy3Scene = anime.timeline();
 		let finalScene = anime.timeline();
 
-    scene1
+		scene1
       .add({
         targets: '#hero',
         opacity: 1,
@@ -90,30 +90,31 @@
 				opacity: 1,
 				offset: 0
 			})
-			// .add({
-			// 	targets: '#shadow',
-			// 	opacity: 1,
-			// })
 			.add({
 				targets: '#hero',
-				scale: {
-					value: [1, 1.1],
-					duration: 6700,
-					easing: 'linear',
-				},
+				translateX: {
+          value: -15,
+          duration: 6700,
+          easing: 'linear',
+        },
+				translateY: {
+          value: 15,
+          duration: 6700,
+          easing: 'linear',
+        },
 			});
 
 			copy1Scene
 			.add({
 				targets: '#copy01',
-				translateY: -154,
+				translateY: -148,
 				opacity: 1,
 				elasticity: 100,
 				offset: 400
 			})
 			.add({
 				targets: '#copy02',
-				translateY: -122,
+				translateY: -109,
 				elasticity: 100,
 				opacity: 1,
 				offset: 500
@@ -136,14 +137,14 @@
 		copy2Scene
 			.add({
 				targets: '#copy03',
-				translateY: -154,
+				translateY: -150,
 				opacity: 1,
 				elasticity: 100,
 				offset: 3500
 			})
 			.add({
 				targets: '#copy04',
-				translateY: -124,
+				translateY: -119,
 				elasticity: 100,
 				opacity: 1,
 				offset: 3600
@@ -203,11 +204,6 @@
 				offset: 9400
 			})
 			.add({
-				targets: '#shadow',
-				opacity: 0,
-				offset: 9400
-			})
-			.add({
 				targets: '#ornate-bottom',
 				translateY: -1000,
 				opacity: 0,
@@ -220,14 +216,14 @@
 		finalScene
 			.add({
 				targets: '#logo-ecu',
-				translateY: -130,
+				translateY: -128,
 				opacity: 1,
 				elasticity: 100,
 				offset: 9900
 			})
 			.add({
 				targets: '#cta',
-				translateY: -39,
+				translateY: -45,
 				elasticity: 100,
 				opacity: 1,
 				offset: 10000
